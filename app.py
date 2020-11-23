@@ -7,6 +7,7 @@ app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
 app.config['MYSQL_PASSWORD'] = ''
 app.config['MYSQL_DB'] = 'plutondb'
+
 mysql = MySQL(app)
 
 app.secret_key='Tecsup123'
@@ -36,4 +37,4 @@ def categorias():
     return render_template('categorias.html')
 
 if __name__ == '__main__':
-    app.run(debug=True,port=3000)
+    app.run(debug=True,port=3000, host='0.0.0.0')
